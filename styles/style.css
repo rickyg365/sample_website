@@ -1,21 +1,34 @@
 :root {
-    --header-h: 80px;
-    --footer-h: 80px;
-
-    --max-page-width: 1080px;
-
+    /* Color */
     --primary-clr: white;
     --secondary-clr: #2d2d2d;
 
     --dark-clr: #2f2f2f;
     --light-clr: white;
+
+    /* Dimensions */
+    --header-h: 80px;
+    --footer-h: 80px;
+
+    --max-page-width: 1080px;
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
 
     box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+div {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -23,11 +36,7 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Custom */
-.debug {
-    outline: 1px solid red;
-}
-
+/* Utility Classes */
 .flex-ctr {
     display: flex;
 
@@ -39,13 +48,17 @@ a {
     display: none !important;
 }
 
+.debug {
+    outline: 1px solid red;
+}
+
 /* Main Elements */
 body {
     width: 100vw;
     height: 100vh;
-    /* background-color: lightcyan; */
 }
 
+/* Header */
 header {
     height: var(--header-h);
 
@@ -57,28 +70,6 @@ header {
     background-color: var(--primary-clr);
 }
 
-main {
-    height: calc(100vh - var(--header-h) - var(--footer-h));
-    background-color: var(--primary-clr);
-}
-
-footer {
-    height: var(--footer-h);
-    background-color: var(--primary-clr);
-}
-
-/* ID */
-#logo {
-    font-weight: 900;
-    color: var(--secondary-clr);
-}
-
-#copyright {
-    font-weight: 400;
-    color: var(--secondary-clr);
-}
-
-/* Classes */
 .header-wrapper {
     width: var(--max-page-width);
     height: 100%;
@@ -87,6 +78,11 @@ footer {
 
     align-items: center;
     justify-content: space-between;
+}
+
+#logo {
+    font-weight: 900;
+    color: var(--secondary-clr);
 }
 
 .navbar {
@@ -140,10 +136,28 @@ footer {
     /* border-bottom: 1px solid var(--secondary-clr); */
 }
 
+/* Main Content */
+main {
+    height: calc(100vh - var(--header-h) - var(--footer-h));
+    background-color: var(--primary-clr);
+}
+
+/* Footer */
+footer {
+    height: var(--footer-h);
+    background-color: var(--primary-clr);
+}
+
 .footer-wrapper {
     height: 100%;
 }
 
+#copyright {
+    font-weight: 400;
+    color: var(--secondary-clr);
+}
+
+/* Media Queries */
 @media only screen and (max-width: 1200px) {
     header {
         padding: 0 2rem;
