@@ -9,6 +9,7 @@ let b = document.querySelector(".bot");
 let menu_modal = document.querySelector(".menu-modal");
 
 let logo = document.querySelector(".logo-container");
+let copyright = document.getElementById("copyright");
 
 hmenu.addEventListener("click", (e) => {
     hwrap.classList.toggle("active-wrap");
@@ -16,6 +17,7 @@ hmenu.addEventListener("click", (e) => {
     m.classList.toggle("active-mid");
     b.classList.toggle("active-bot");
 
-    logo.classList.toggle("modal-logo");
+    logo.classList.toggle("above-modal");
+    copyright.classList.toggle("above-modal");
     menu_modal.classList.toggle("hidden");
 });

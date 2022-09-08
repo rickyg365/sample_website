@@ -67,6 +67,17 @@ footer {
     background-color: var(--primary-clr);
 }
 
+/* ID */
+#logo {
+    font-weight: 900;
+    color: var(--secondary-clr);
+}
+
+#copyright {
+    font-weight: 400;
+    color: var(--secondary-clr);
+}
+
 /* Classes */
 .header-wrapper {
     width: var(--max-page-width);
@@ -78,70 +89,12 @@ footer {
     justify-content: space-between;
 }
 
-#logo {
-    font-weight: 900;
-    color: var(--secondary-clr);
-}
-
 .navbar {
     height: 100%;
     display: flex;
 
     align-items: center;
     justify-content: space-between;
-}
-
-.hamburger-menu {
-    z-index: 2;
-    display: none;
-
-    padding: 8px;
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary-clr);
-    border-radius: 4px;
-    /* outline: 1px solid var(--secondary-clr); */
-}
-
-.h-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    gap: 4px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.bar {
-    height: 4px;
-    width: 100%;
-
-    transform-origin: 50%;
-
-    background-color: var(--secondary-clr);
-    border-radius: 8px;
-}
-
-.active-wrap {
-    width: 1px;
-    height: 1px;
-}
-
-.active-top {
-    width: 27px;
-    position: absolute;
-    transform: rotateZ(45deg) translate(-1px, -1px);
-}
-.active-mid {
-    display: none;
-}
-.active-bot {
-    width: 27px;
-    position: absolute;
-    transform: rotateZ(-45deg) translate(1px, -1px);
 }
 
 .nav-list {
@@ -187,52 +140,8 @@ footer {
     /* border-bottom: 1px solid var(--secondary-clr); */
 }
 
-.menu-modal {
-    z-index: 1;
-
-    position: absolute;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-
-    background-color: var(--primary-clr);
-}
-
-.menu {
-    list-style: none;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 22px;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu-item {
-    font-size: 2rem;
-    font-weight: 550;
-
-    text-decoration: none;
-
-    color: var(--secondary-clr);
-}
-
-.menu-item:hover {
-    font-size: 2.5rem;
-}
-
 .footer-wrapper {
     height: 100%;
-}
-
-#copyright {
-    font-weight: 400;
-    color: var(--secondary-clr);
-}
-
-.modal-logo {
-    z-index: 2;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -242,9 +151,6 @@ footer {
 }
 
 @media only screen and (max-width: 750px) {
-    .hamburger-menu {
-        display: flex;
-    }
     .nav-list {
         display: none;
     }
