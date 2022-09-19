@@ -155,9 +155,10 @@ main {
 
 .hero {
     display: flex;
+    gap: 22px;
     flex-direction: column;
 
-    padding: 3rem 1rem;
+    padding: 3rem 0;
 }
 
 .hero-title {
