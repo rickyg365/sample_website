@@ -143,7 +143,9 @@ header {
 
 /* Main Content */
 main {
-    height: calc(100vh - var(--header-h) - var(--footer-h));
+    padding: 0 32px;
+    min-height: calc(100vh - var(--header-h) - var(--footer-h));
+    height: max(fit-content, calc(100vh - var(--header-h) - var(--footer-h)));
     display: flex;
     flex-direction: column;
 
@@ -151,27 +153,50 @@ main {
     background-color: var(--primary-clr);
 }
 
-.projects {
-    padding: 40px 0;
+.hero {
+    display: flex;
+    flex-direction: column;
 
+    padding: 3rem 1rem;
+}
+
+.hero-title {
+    font-weight: 550;
+    font-size: 2.2rem;
+}
+.subhero {
+}
+
+.projects {
+    padding: 1rem 0;
     width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
 }
 
 .project-title {
-    padding: 22px 0;
+    font-size: 1.3rem;
+    color: var(--secondary-clr);
+    /* align-self: flex-start; */
+    padding: 32px 0;
 }
 
 .project-carousel {
+    width: 100%;
     display: flex;
-
-    align-items: center;
-    justify-content: space-between;
+    gap: 40px;
 }
 
 .project-wrap {
-    width: 250px;
-    height: 300px;
-
+    /* flex: 0 0 400px; */
+    width: 400px;
     /* padding: 0.5rem; */
 
     display: flex;
@@ -181,25 +206,63 @@ main {
 
     /* border-radius: 10px; */
     /* background-color: var(--primary-clr); */
-
     /* outline: 1px solid var(--secondary-clr); */
 }
 
 .img {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
 
     overflow: hidden;
 
     border-radius: 8px;
-    background-color: lightgoldenrodyellow;
+    /* background-color: lightgoldenrodyellow; */
 }
 
 .img > img {
-    max-width: 100%;
-    height: 100%;
+    width: max(400px, 100vw);
+    height: 350px;
 
     object-fit: cover;
+}
+
+@media only screen and (max-width: 810px) {
+    .projects {
+        gap: 0px;
+    }
+    .project-title {
+        padding: 1rem 0;
+        align-self: flex-start;
+    }
+    .project-carousel {
+        flex-direction: row;
+        gap: 0px;
+        width: 100%;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+    }
+
+    .project-wrap {
+        scroll-snap-align: start;
+        margin: 0 0.5rem;
+        width: 100%;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 810px) {
+    .project-carousel {
+        justify-content: space-between;
+    }
+    .project-wrap {
+        flex: 0 1 400px;
+    }
+
+    .img > img {
+        width: 100%;
+    }
 }
 
 .description {
