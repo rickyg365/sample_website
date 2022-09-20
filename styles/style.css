@@ -232,12 +232,12 @@ main {
 
     object-fit: cover;
 }
-
 @media only screen and (max-width: 810px) {
     .hero {
         padding: 2rem 0;
     }
     .hero-title {
+        align-self: flex-start;
         font-weight: 550;
         font-size: 2.2rem;
     }
@@ -260,10 +260,11 @@ main {
     }
 
     .project-wrap {
-        flex: 0 0 400px;
+        flex: 0 0 min(400px, 100%);
+        width: min(400px, 100%);
         scroll-snap-align: center;
         /* margin: 0 0.5rem; */
-        margin: 0 calc(50vw - 200px);
+        margin: 0 calc(100vw - 200px);
     }
 
     ::-webkit-scrollbar {
@@ -281,6 +282,18 @@ main {
 
     .img > img {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .project-carousel {
+    }
+
+    .project-wrap {
+        flex: 0 0 min(400px, 100%);
+        width: min(400px, 100%);
+        scroll-snap-align: start;
+        margin: 0 0.25rem;
     }
 }
 
