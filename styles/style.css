@@ -131,6 +131,10 @@ footer {
     transition: border-bottom 300ms;
 }
 
+section {
+    padding: 44px 0;
+}
+
 .copyright {
     height: 100%;
 }
